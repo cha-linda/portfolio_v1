@@ -1,0 +1,117 @@
+
+.gallery-content {
+    cursor: url('/media/pink.png'), pointer;
+    height: 75vh;
+    width: 100vw;
+    background-color: #E8AA00;
+    margin: 0rem;
+    overflow: hidden;
+    position: relative;
+    .content {
+        justify-content: flex-start;
+        .text-container {
+            max-width: 30%;
+        }
+    }
+    #image-track {
+        display: flex;
+        gap: 0vmin;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(0%, -50%); 
+        user-select: none; /* -- Prevent image highlighting -- */
+    }
+    #image-track > .image {
+        width: 50vmin;
+        height: 100vmin;
+        object-fit: cover;
+        object-position: 100% center;
+        outline: 3px solid black;
+    }
+}
+
+.portfolio-btn {
+    height: 100%;
+    width: 5%;
+    aspect-ratio: 16/9;
+    position: absolute;
+    display: flex;
+    left: 0;
+    outline: black solid 3px;
+    bottom: 0;
+    z-index: 10;
+    background: black;
+    background-size: contain;
+    box-shadow: 5px 0px 15px 0px rgba(0,0,0,0.55);
+    padding: 3% 10px 3% 10px;
+    &:hover {
+        span:after {
+            top: 10px;
+            transition: all .5s ease-in-out;
+        }
+    }
+    span {
+        color: #E4E7E9;
+        align-self: end;
+        max-width: 70px;
+        position: relative;
+        padding-top: 100px;
+        font-size: .8em;
+        &:after {
+            position: absolute;
+            content:"";
+            top: 0;
+            left: 0;
+            height: 90px;
+            width: 50px;
+            background: url("/media/telecharger\ \(1\).png") center center no-repeat;
+            background-size: contain;
+            filter: invert(1);
+        }
+    }
+}
+
+
+.gallery-caption {
+    background-color: #E8AA00;
+    border-left: 3px solid #000;
+    width: 100vmin;
+    height: 100vmin;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2% 0 2% 7%;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 25%;
+        left: 5%;
+        top: 50%;
+        background: #000;
+    }
+    h4 {
+        font-size: clamp(2em, 3.5vw, 6em);
+        color: #000;
+        font-family: 'Cooper Hewitt', sans-serif;
+    }
+}
+@media(max-width: 568px) {
+    .gallery-content {
+        height: 100vh;
+        #image-track {
+            top: 82%;
+            left: 10%;
+            .image {
+                height: 75vmin;
+            }
+        }
+    }
+    .gallery-content .content .text-container {
+        max-width: 100%;
+        padding-left: 30%;
+    }
+}

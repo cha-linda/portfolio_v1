@@ -1,0 +1,22 @@
+body, html {
+    position: relative;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+input, button, textarea, select{
+    font: inherit;
+}
+
+a {
+    text-decoration: none;  
+}

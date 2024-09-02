@@ -1,0 +1,187 @@
+/********* FONT ********/
+@font-face {
+    font-family: 'Arvo';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/arvo/v22/tDbM2oWUg0MKoZw1-LPK8w.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKfw72.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+$font-family: 'Ubuntu', sans-serif;
+$title-font: 'Arvo', serif;
+
+/******** COLOR *******/
+$dark_main-color: #2A3550;
+$medium_main-color: #425676;
+$light_main-color: #7D9EC2;
+$complementary-color: #C23F0F;
+
+$success-color: #556F4C;
+
+
+$carbone: #1C232E;
+$cloud: #E1E4EE;
+$box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.41);
+
+/****** MIXINS ******/
+@mixin __btn {
+    border: $carbone 2px solid;
+    border-radius: 50px;
+    &:hover {
+        background: $light_main-color;
+        transition: all .3s ease-in;        
+    }
+}
+
+@mixin __darkBack_btn {
+    @include __btn;
+    color: $cloud;
+    border-color: $cloud;
+    &:hover, &:focus {
+        background: $dark_main-color;
+        color: $cloud;
+    }
+}
+@mixin __lightBack_btn {
+    @include __btn;
+    color: $carbone;
+    border-color: $carbone;
+    &:hover, &:focus {
+        background: $light_main-color;
+    }    
+}
+
+@mixin __plainBack_btn {
+    @include __btn;
+    color: $cloud;
+    background: $medium_main-color;
+}
+
+/********* BASE *********/
+body {
+    background: $carbone;
+}
+* {
+    color: $cloud;
+    font-family: $font-family;
+}
+* .item {
+    padding: 10px;
+    border-radius: 0;
+    .img-container {
+        border-radius: 5px;
+    }
+}
+
+h1, h2 {
+    font-family: $title-font;
+}
+h3 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+
+/******** NAV *********/
+nav {
+    background: $carbone;
+    box-shadow: $box-shadow;
+    a {
+        @include __darkBack_btn;
+    }
+    .active {
+        background: $cloud;
+        color: $carbone;
+    }
+}
+/******* BANNER ******/
+.banner {
+    background: $cloud;
+    .content {
+        max-width: unset;
+        position: relative;
+        * {
+            color: $carbone;
+        }
+        h1 {
+            font-size: 5em;
+        }
+        h2 {
+            font-family:$font-family;
+            text-transform: uppercase;
+        }
+        .btn-container {
+            justify-content: start;
+            .btn {
+                @include __lightBack_btn;
+            }
+        }
+    }
+}
+
+/******* ITEMS ********/
+.items {
+    .item {
+        .img-container {
+            img {
+                max-height: 150px;
+                filter: invert(1);
+            }
+        }
+        .text-container {
+            * {
+                text-align: center;
+            }
+            h3 span {
+                color: $medium_main-color !important;
+                font-size: 2em;
+            }
+        }
+        
+    }
+}
+/********* PRODUCTS ********/
+.products {
+    background: rgba($medium_main-color, .5);
+    .content {
+        max-width: unset;
+        justify-content: space-between;
+    }
+    .title, .filters {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .filters {
+        justify-content: end;
+    
+        button {
+            @include __darkBack_btn;
+        }
+    }
+    .list {
+            padding-top: 1em;
+    }
+    article {
+        background: transparent;
+        border: 2px solid $cloud;
+        cursor: pointer;
+        .content {
+            
+        }
+    }
+
+}
+.active-filter {
+    background: $medium_main-color !important;
+    color: $cloud !important;
+}
+

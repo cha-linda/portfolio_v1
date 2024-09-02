@@ -1,0 +1,60 @@
+body {
+  position: relative;
+  background: #000;
+  padding: 5%;
+}
+
+.app {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  max-width: 600px;
+  margin: auto;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("/test_gallery/log_lady.jpg");
+}
+
+.skew {
+  position: relative;
+  margin: 5% auto 0;
+  width: 90vw;
+  border-radius: 30px;
+  aspect-ratio: 16/9;
+  background: url("/test_gallery/skew/background.jpg");
+  max-width: 1400px;
+}
+.skew .container {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skew .container:after {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.9);
+}
+.skew .container .target {
+  flex: 0 0 20%;
+  max-width: calc(25% - 20px);
+  margin: 10px;
+  aspect-ratio: 9/18;
+  height: auto;
+  background: #ebebeb;
+  border-radius: 20px;
+  box-shadow: var(--lat-shadow) 25px 30px -10px rgba(0, 0, 0, 0.35);
+  transform: perspective(500px) rotateY(var(--mouse-x));
+}/*# sourceMappingURL=test.css.map */
