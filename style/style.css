@@ -66,7 +66,7 @@ button {
   padding: 0;
   border-radius: 50%;
   border: none;
-  background-image: url("/media/burger-menu.png");
+  background-image: url("media/burger-menu.png");
   background-color: transparent;
   background-position: center center;
   background-size: contain;
@@ -78,7 +78,7 @@ button {
   padding: 0;
   border-radius: 50%;
   border: none;
-  background-image: url("/media/close.png");
+  background-image: url("media/close.png");
   background-color: transparent;
   background-position: center center;
   background-size: contain;
@@ -206,7 +206,7 @@ button {
   max-width: 100%;
 }
 .before-after .content .item .split .split__right {
-  background: url("/media/06-ConvertImage.jpg");
+  background: url("media/06-ConvertImage.jpg");
   background-size: cover;
   pointer-events: none;
   position: absolute;
@@ -642,7 +642,7 @@ nav .active {
 .projects .deployed .inner .text-container .action .git {
   min-height: 80px;
   height: 100%;
-  background-image: url("/media/github-logo_icon-icons.com_73546.webp");
+  background-image: url("media/github-logo_icon-icons.com_73546.webp");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 80%;
@@ -656,7 +656,7 @@ nav .active {
   transition: all 0.5s ease-in-out;
 }
 .projects .deployed .inner .text-container .action .nogit {
-  background-image: url("/media/black_cat_icon_177458.webp");
+  background-image: url("media/black_cat_icon_177458.webp");
   pointer-events: none;
 }
 
