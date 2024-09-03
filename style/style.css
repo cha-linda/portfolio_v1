@@ -424,6 +424,7 @@ h3 {
 
 .close {
   border: 2px solid #000911;
+  background-image: url("media/close.png");
   background-color: #E8AA00;
 }
 .close:hover, .close:focus {
@@ -642,7 +643,7 @@ nav .active {
 .projects .deployed .inner .text-container .action .git {
   min-height: 80px;
   height: 100%;
-  background-image: url("/media/github-logo_icon-icons.com_73546.webp");
+  background-image: url("media/github-logo_icon-icons.com_73546.webp");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 80%;
