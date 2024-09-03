@@ -424,7 +424,6 @@ h3 {
 
 .close {
   border: 2px solid #000911;
-  background-image: url("media/close.png");
   background-color: #E8AA00;
 }
 .close:hover, .close:focus {
