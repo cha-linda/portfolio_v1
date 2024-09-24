@@ -737,7 +737,7 @@ nav .active {
   position: absolute;
   height: 100px;
   width: 100%;
-  background: url("/media/640px-VeveAyizan.svg.png") center center no-repeat;
+  background: url("media/640px-VeveAyizan.svg.png") center center no-repeat;
   background-size: contain;
   filter: invert(1);
   top: 0;
@@ -940,7 +940,7 @@ nav .active {
   left: 0;
   height: 90px;
   width: 50px;
-  background: url("/media/telecharger (1).png") center center no-repeat;
+  background: url("media/telecharger (1).png") center center no-repeat;
   background-size: contain;
   filter: invert(1);
 }
