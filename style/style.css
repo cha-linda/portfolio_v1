@@ -413,7 +413,7 @@ h1 {
 
 h2 {
   font-family: "cooper hewitt", serif;
-  font-size: clamp(2em, 1.8vw, 2em);
+  font-size: clamp(1.7em, 1.8vw, 1.9em);
 }
 
 h3 {
@@ -871,7 +871,7 @@ nav .active {
 }
 
 .gallery-content {
-  cursor: url("/media/pink.png"), pointer;
+  cursor: url("media/pink.png"), pointer;
   height: 75vh;
   width: 100vw;
   background-color: #E8AA00;
